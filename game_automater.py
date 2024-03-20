@@ -17,18 +17,6 @@ class DinoGameAutomater:
         self.restart_game_img = "Pics/restartGameButton.png"
 
 
-    def find_dinosaur(self, image_dinosaur):
-
-        position_dinosaur = pyautogui.locateCenterOnScreen(image_dinosaur, confidence=0.9)
-
-        if position_dinosaur:
-            print("Dino wurde erkannt")
-            self.x_dinosaur, self.y_dinosaur = position_dinosaur
-
-
-
-
-
     def game(self):
         driver = webdriver.Chrome()
         driver.set_window_size(1920, 1080)
